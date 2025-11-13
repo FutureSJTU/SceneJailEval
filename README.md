@@ -61,6 +61,23 @@ pip install -r requirements.txt
 cp CallAPI/config.py.example CallAPI/config.py
 ```
 
+## 🔧 Configuration
+
+### API Configuration
+Edit `CallAPI/config.py` to configure your LLM API:
+
+```python
+# Configuration parameters
+BASE_URL = "your-api-base-url"
+API_KEY = "your-api-key"
+DEFAULT_CHAT_MODEL = "your-model-name"
+CHAT_KWARGS = {
+    "temperature": 0.7,
+    "max_tokens": 1000
+}
+```
+
+
 ## 🚀 Quick Start
 
 ### Single Query Evaluation
@@ -124,21 +141,7 @@ The CSV dataset contains the following columns:
 - `label`: Ground truth jailbreak label (0/1)
 - `harm_*_expert`: Expert annotations for harm dimensions
 
-## 🔧 Configuration
 
-### API Configuration
-Edit `CallAPI/config.py` to configure your LLM API:
-
-```python
-# Configuration parameters
-BASE_URL = "your-api-base-url"
-API_KEY = "your-api-key"
-DEFAULT_CHAT_MODEL = "your-model-name"
-CHAT_KWARGS = {
-    "temperature": 0.7,
-    "max_tokens": 1000
-}
-```
 
 ### Evaluation Parameters
 Customize evaluation behavior in the respective modules:
